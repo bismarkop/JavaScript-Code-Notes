@@ -215,3 +215,62 @@ let numArray2 = [
 // // We can also copy and insert additional elements simultaneously using the spread operator:
 // let moreMovies = ['Interstellar', ...movieSpread, 'Contact']
 // console.log(moreMovies) // [ 'Interstellar', 'Spaceballs', 'The Sting', 'Alien', 'Contact' ]
+
+// ***** Objects *****
+// These are key-value pairs that allow for storing more specific data. Key-value pairs are also know as properties.
+
+// const vehicle = {
+// 	color: "blue",
+// 	hp: 4000,
+// 	year: 1989,
+// 	"active registration": true
+// };
+
+// // This is how you access objects. Starting with values ***Remember, it's best practice to use dot notation to access the value inside keys. Bracket notation is only used for a key that has a space in it and is surround by quotation marks.:
+// // console.log(vehicle.color); // blue
+// // console.log(vehicle.hp); // 4000
+// // console.log(vehicle["active registration"]); // true
+
+// // You can change object properties and values, assigning new keys and values to an object after it has been created or overwriting the values of existing keys. 
+// // The -delete- keyword can also be used to remove properties
+// vehicle.color = "orange"; // Changes the color value to orange
+// vehicle.make = "Maserati"; // Adds a property - make: "Maserati"
+// delete vehicle["active registration"]; // removes this property
+// // console.log(vehicle) // { color: 'orange', hp: 4000, year: 1989, make: 'Maserati' }
+
+// // *** Iterating through objects is similar to using the for...in loop
+
+// for (const key in vehicle) {
+// 	console.log(vehicle[key]);
+// }
+// // **Note that we must use square bracket notation to access the vehicle properties using key, because key is a variable, not a literal. Trying to use vehicle.key would attempt to access a property named key, which does not exist within our vehicle object.**
+
+// ***Object Methods***
+// Objects can be much more complex than arrays, especially when nested with other objects:
+
+const vehicle = {
+	color: "blue",
+	year: 1989,
+	make: "Audi",
+	engine: {
+		cylinders: 6,
+		hp: 4000,
+		size: 3.2
+	}
+}
+
+console.log(vehicle.engine.size); // 3.2
+
+let myMovies = ['Caddyshack', 'Interstellar', 'Scarface', 'Trading Places'];
+let yourMovies = ['Caddyshack', 'Interstellar', 'Scarface', 'Trading Places'];
+
+// ***In JavaScript, objects (including arrays) are a reference type. Two distinct objects are never equal, even if they have the same properties. Only comparing the same object reference with itself yields true.***
+console.log(myMovies == yourMovies); // false
+console.log(myMovies[0] == yourMovies[0]); // true
+
+// ***** When to use Objects or Arrays *****
+// When designing your programs, it is up to you to choose how to model your data. We can represent real-life things with our datatypes, but it's a matter of choosing the appropriate datatypes.
+
+// If the thing you want to model is just a list, use an array.
+// If the thing want to model has properties, use an object.
+// For more simple things use Strings, Numbers, Booleans and other simple datatypes.
