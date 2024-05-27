@@ -1,7 +1,7 @@
 // Remember that will all be based off of the next to variables and not the changes made to them for clarity's sake
 
-let movies = ['Caddyshack', 'Interstellar', 'Scarface'];
-let movies2 = ['Batman', 'The Count of Monte Cristo', 'Shrek'];
+let movies = ['Caddyshack', 'Interstellar', 'Scarface', 'The Happening'];
+let movies2 = ['Batman', 'The Count of Monte Cristo', 'Shrek', 'Coco'];
 
 // Populating an array by index.
 //This replaces the value at the given index
@@ -81,18 +81,71 @@ shift <- [...] -> pop
 -deleteCount- represents how many items from the start point, including the start point
 -newItemN- represents the item to be added 
 */ 
-let spliceMovieList = ['Superman', 'Iron Man', 'Black Panther', 'Deadpool'];
-//Uncomment everything splice related to see what was done.
-let removedMovies = spliceMovieList.splice(3, 1, "The Lion King", "Beauty and the Beast")
-console.log(removedMovies) // Deadpool
-console.log(spliceMovieList) // ['Superman', 'Iron Man', 'Black Panther', 'The Lion King', 'Beauty and the Beast']
+// let spliceMovieList = ['Superman', 'Iron Man', 'Black Panther', 'Deadpool'];
+// //Uncomment everything splice related to see what was done.
+// let removedMovies = spliceMovieList.splice(3, 1, "The Lion King", "Beauty and the Beast");
+// console.log(removedMovies); // Deadpool
+// console.log(spliceMovieList); // ['Superman', 'Iron Man', 'Black Panther', 'The Lion King', 'Beauty and the Beast']
 
-removedMovies = spliceMovieList.splice(0, 3)
-console.log(removedMovies) // [ 'Superman', 'Iron Man', 'Black Panther' ]
-console.log(spliceMovieList) // [ 'The Lion King', 'Beauty and the Beast' ]
+// removedMovies = spliceMovieList.splice(0, 3);
+// console.log(removedMovies); // [ 'Superman', 'Iron Man', 'Black Panther' ]
+// console.log(spliceMovieList); // [ 'The Lion King', 'Beauty and the Beast' ]
 
-removedMovies = spliceMovieList.splice(1, 0, "Fake movie inserted")
-console.log(spliceMovieList) // [ 'The Lion King', 'Beauty and the Beast' ]
-console.log(removedMovies) // [], this is empty because nothing was removed from the last splice. However, notice that the spliceMovieList has still changed.
+// removedMovies = spliceMovieList.splice(1, 0, "Fake movie inserted");
+// console.log(spliceMovieList); // [ 'The Lion King', 'Beauty and the Beast' ]
+// console.log(removedMovies); // [], this is empty because nothing was removed from the last splice. However, notice that the spliceMovieList has still changed.
 
-// ***** slice() *****
+// ***** slice() ***** DO NOT CONFUSE THIS WITH SPLICE
+// This extracts a section from an array and returns a new array. It takes a starting index and ending index and returns all elements between those to, NOT INCLUDING THE ENDING INDEX). This can be added to a variable
+// let middleMovies = movies.slice(1, 3);
+// console.log(middleMovies); // [ 'Interstellar', 'Scarface' ]
+
+/*
+*** Splice can add to an array and changes the original array, slice does neither - it only extracts the given portion ***
+*/
+
+// ***** at() *****
+// This accesses an element at the given position in the array. This is useful due to its ability to count backwards from the end of an array
+// let myMovie = movies.at(1) 
+// let myOtherMovie = movies.at(-1) 
+// console.log(myMovie) // Interstellar
+// console.log(myOtherMovie) // "The Happening"
+
+// ***** MULTI-DIMENSIONAL ARRAYS *****
+
+// Two-dimensional array
+// let numArray = [
+// 	[1, 2, 3],
+// 	[4, 5, 6],
+// 	[7, 8, 9],
+// ];
+
+// console.log(numArray[0]) // [1, 2, 3]
+// console.log(numArray[0][0]) // 1
+// console.log(numArray[2][0]) // 7
+
+// The following loops through the array of arrays, and through each element of the subarray
+// for (let i=0; i < numArray.length; i++) {
+//     let subArray = numArray[i]
+//     console.log(`Initial subarray: [${subArray}]`) 
+
+//     for (let j=0; j<numArray.length; j++) {
+//         let subArrElements = numArray[i][j]
+//         console.log(`Subarray elements: ${subArrElements}`)
+//     }
+// };
+
+// Three-dimensional array
+// let numArray2 = [
+// 	[1, 2, 3],
+// 	[4, 5, 6],
+// 	[
+// 		[7, 8, 9],
+// 		[10, 11, 12],
+// 		[13, 14, 15]
+// 	],
+// ];
+
+// console.log(numArray2[2][1][1]) // 11
+// console.log(numArray2[2][2][1]) // 14
+
