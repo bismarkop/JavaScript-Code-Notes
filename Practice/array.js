@@ -206,3 +206,12 @@ let numArray2 = [
 //     console.log(movie)
 // }
 
+// *****The Spread Operator *****
+// This is a new way to copy an entire erray using "..." - the spread operator
+// let movieSpread = [ 'Spaceballs', 'The Sting', 'Alien' ];
+// let movieSpreadCopy = [...movieSpread]; // [ 'Spaceballs', 'The Sting', 'Alien' ]
+// console.log(movieSpreadCopy)
+
+// // We can also copy and insert additional elements simultaneously using the spread operator:
+// let moreMovies = ['Interstellar', ...movieSpread, 'Contact']
+// console.log(moreMovies) // [ 'Interstellar', 'Spaceballs', 'The Sting', 'Alien', 'Contact' ]
