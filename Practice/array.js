@@ -1,4 +1,4 @@
-// Remember that will all be based off of the next to variables and not the changes made to them for clarity's sake
+// Remember that most of these examples will be based off of the following movie and movies and for clarity's sake. Look out for the methods that have their own arrays and avoid the variables with the same names!
 
 let movies = ['Caddyshack', 'Interstellar', 'Scarface', 'The Happening'];
 let movies2 = ['Batman', 'The Count of Monte Cristo', 'Shrek', 'Coco'];
@@ -136,16 +136,51 @@ shift <- [...] -> pop
 // };
 
 // Three-dimensional array
-// let numArray2 = [
-// 	[1, 2, 3],
-// 	[4, 5, 6],
-// 	[
-// 		[7, 8, 9],
-// 		[10, 11, 12],
-// 		[13, 14, 15]
-// 	],
-// ];
+let numArray2 = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[
+		[7, 8, 9],
+		[10, 11, 12],
+		[13, 14, 15]
+	],
+];
 
 // console.log(numArray2[2][1][1]) // 11
 // console.log(numArray2[2][2][1]) // 14
 
+// ***** flat() *****
+// This gives us the option to turn multi-dimensional arrays into less multi-dimensional arrays. This method accepts a number which is the depth at which it will flatten the array (the default is 1), indicating to an indicator of how many dimensions you want reduced from the array. Be cautious in your usage of flat(), as most of the time multi-dimensional data structures are built that way for a reason. Luckily, flat() returns a copy of the original array, meaning your nested, multi-dimensional structure is still there if and when you need it!
+
+// let twoD = numArray2.flat()
+// This removed one dimension by default, that being the first two subarray, leaving the nested array.
+// console.log(twoD) // [ 1, 2, 3, 4, 5, 6, [ 7, 8, 9 ], [ 10, 11, 12 ], [ 13, 14, 15 ] ]
+
+// let twoD = numArray2.flat(2)
+// console.log(twoD) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+// ***** sort() *****
+// The sort() method sorts an array in place. By default, sort() compares the numerical values of elements and sorts them in ascending order. In the case of strings, this means comparing their UTF-16 code units values. This roughly translates to alphabetical order. Other data types undergo a data conversion to strings before sorting in this same manner, if possible.
+
+// You can also define a custom sort by using what is known as a callback function. Callback functions are beyond the scope of this lesson, but as you move into the lesson on functions, just remember that you can pass an entire function into the sort() method (and many other methods) to change its behavior.
+
+// ***** use the toSorted() method to get a sorted copy of the array without modifying the original array
+
+// let numArray = [4, 8, 1, 0, -14, 22, 77, 1388, 20];
+// let movieList = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Spaceballs', 'Alien', 'The Count of Monte Cristo'];
+
+// console.log(numArray.sort()); // [-14, 0, 1, 1388, 20, 22, 4, 77, 8] Notice how this is sorting from negatives to the order from 0-9, disregarding least to greatest in total
+// console.log(movieList.sort()); // ['Alien', 'Batman', 'Caddyshack', 'Interstellar', 'Scarface', 'Shrek', 'Spaceballs', 'The Count of Monte Cristo']
+
+// ***** indexOf *****
+// This looks for the value passed into it, and returns the index of the first element that matches that value, if any. If the value is not present, it returns -1
+
+// let movieIndex = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Spaceballs', 'Alien', 'The Count of Monte Cristo'];
+// let batmanIndex = movieIndex.indexOf('Batman'); // 2
+// console.log(batmanIndex);
+
+// // Now, there is no rule against duplicate values in arrays, so what if I wanted to find the last occurence of "Batman" in the array below? Thankfully, lastIndexOf() does the exact same thing, but starts at the end of the array.
+// // *****lastIindexOf *****
+// let movieIndex2 = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Batman', 'Spaceballs', 'Alien', 'Batman', 'The Count of Monte Cristo'];
+// let batmanIndex2 = movieIndex2.lastIndexOf('Batman'); // 8
+// console.log(batmanIndex2)
