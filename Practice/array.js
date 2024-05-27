@@ -184,3 +184,25 @@ let numArray2 = [
 // let movieIndex2 = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Batman', 'Spaceballs', 'Alien', 'Batman', 'The Count of Monte Cristo'];
 // let batmanIndex2 = movieIndex2.lastIndexOf('Batman'); // 8
 // console.log(batmanIndex2)
+
+// ***** forEach() ***** 
+// Although a for loop can be used to iterate over an array, if you know you want to iterate over all of the elements in an array, the forEach() method is a better approach. forEach() is another method that accepts a callback function, like sort(). 
+
+// let movieList = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Spaceballs', 'Alien', 'The Count of Monte Cristo'];
+
+// // forEach() calls the function provided as an argument once for each element in the array. Note that it is good practice to name the parameter that accepts each element as the singular of the array, or simply the first letter of the array variable (movie or m for this example).
+// movieList.forEach((movie) => {
+// 	console.log(movie);
+// });
+
+// // You can also access the index within each iteration:
+// movieList.forEach((movie, i) => {
+//     console.log(i + ': ' + movie);
+// });
+
+// // We also have the for...of loop for iterating over the elements of arrays and other iterables such as strings Unlike forEach, the for...of loop can be exited using the break statement:
+// for (let movie of movieList) {
+//     if (movie === "Spaceballs") break;
+//     console.log(movie)
+// }
+
