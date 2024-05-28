@@ -111,6 +111,7 @@ shift <- [...] -> pop
 // console.log(myMovie) // Interstellar
 // console.log(myOtherMovie) // "The Happening"
 
+
 // ***** MULTI-DIMENSIONAL ARRAYS *****
 
 // Two-dimensional array
@@ -149,6 +150,7 @@ let numArray2 = [
 // console.log(numArray2[2][1][1]) // 11
 // console.log(numArray2[2][2][1]) // 14
 
+
 // ***** flat() *****
 // This gives us the option to turn multi-dimensional arrays into less multi-dimensional arrays. This method accepts a number which is the depth at which it will flatten the array (the default is 1), indicating to an indicator of how many dimensions you want reduced from the array. Be cautious in your usage of flat(), as most of the time multi-dimensional data structures are built that way for a reason. Luckily, flat() returns a copy of the original array, meaning your nested, multi-dimensional structure is still there if and when you need it!
 
@@ -180,6 +182,7 @@ let numArray2 = [
 // console.log(batmanIndex);
 
 // // Now, there is no rule against duplicate values in arrays, so what if I wanted to find the last occurence of "Batman" in the array below? Thankfully, lastIndexOf() does the exact same thing, but starts at the end of the array.
+
 // // *****lastIindexOf *****
 // let movieIndex2 = ['Shrek', 'Caddyshack', 'Batman', 'Interstellar', 'Scarface', 'Batman', 'Spaceballs', 'Alien', 'Batman', 'The Count of Monte Cristo'];
 // let batmanIndex2 = movieIndex2.lastIndexOf('Batman'); // 8
@@ -245,7 +248,7 @@ let numArray2 = [
 // }
 // // **Note that we must use square bracket notation to access the vehicle properties using key, because key is a variable, not a literal. Trying to use vehicle.key would attempt to access a property named key, which does not exist within our vehicle object.**
 
-// ***Object Methods***
+// *****Object Methods*****
 // Objects can be much more complex than arrays, especially when nested with other objects:
 
 const vehicle = {
